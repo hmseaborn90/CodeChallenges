@@ -20,10 +20,6 @@ def allLongestStrings(inputArray):
 #             outputArray.append(inputArray[i])
 #     return outputArray
 
-test = ["aba", 
- "aa", 
- "adddd", 
- "vcd", 
- "aba"]
+test = ["aba", "aa", "adddd", "vcd", "aba"]
 
 print(allLongestStrings(test))
