@@ -17,37 +17,7 @@ class BinaryTree(object):
             return self.postorder_print(tree.root, "")
         else:
             print(f"traversal type {str(traversal_type)} is not supported")
-    
-    def height(root):
-        if root is None:
-            return 0
-        return max(height(root.left), height(root.right)) + 1
-    
-    def balancedBinaryTree(root):
-        if root is None:
-            return True
-            
-        left_height = height(root.left)
-        right_height = height(root.right)
-        if(abs(left_height - right_height) <= 1) and balancedBinaryTree(root.left) is True and balancedBinaryTree(root.right) is True:
-            return True
-    
-        return False
-    
-    def minimumDepthBinaryTree(root):
-        if root is None:
-            return 0
-            
-        if root.left is None and root.right is None:
-            return 1
-        
-        if root.left is None:
-            return minimumDepthBinaryTree(root.right) +1
-        
-        if root.right is None:
-            return minimumDepthBinaryTree(root.left) +1
-            
-        return min(minimumDepthBinaryTree(root.left), minimumDepthBinaryTree(root.right)) +1
+
 
     def preorder_print(self, start, traversal):
         if start:
@@ -80,4 +50,3 @@ tree.root.right.right = Node(7)
 print(tree.print_tree("preorder"))
 print(tree.print_tree("inorder"))
 print(tree.print_tree("postorder"))
-print(tree.balancedBinaryTree(1))
