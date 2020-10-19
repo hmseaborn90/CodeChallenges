@@ -6,3 +6,7 @@ def alphabeticShift(inputString):
         else:
             result += chr(ord(i) + 1)
     return result
+
+
+
+print(alphabeticShift("iipxyyiprryiuuoz"))
