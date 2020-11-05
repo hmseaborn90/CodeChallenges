@@ -22,3 +22,24 @@
             return True
         else:
             return False
+
+
+
+
+def delDupunsorted(self):
+temp=self.head
+while temp != None:
+temp2=temp
+
+print(temp.data , temp2.next.data)
+while temp2.next != None:
+if temp.data == temp2.next.data:
+dup=temp2.next
+temp2.next=temp2.next.next
+print("if")
+del dup
+else:
+temp2=temp2.next
+print("else")
+
+temp=temp.next
